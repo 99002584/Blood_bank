@@ -1,6 +1,8 @@
-#include <iostream>
+#include<iostream>
 //#include<windows.h>
 #include "Data_base.h"
+#include<thread>
+#include<chrono>
 #include<cstring>
 using namespace std;
 int main()
@@ -40,7 +42,7 @@ int main()
         break;
         case 4:
         {
-        	cout<<"\n\nBrought To You By code-projects.org";
+        	cout<<"\n\n enter new choice";
             return 0;
         }
         break;
@@ -49,9 +51,15 @@ int main()
         {
             system("cls");
             cout<<"\a\aPlease Enter your choice Correctly:\a\a"<<endl;
+            {
+            this_thread::sleep_for(chrono::seconds(5));
+            }
+
         }
         break;
         }
+
+
 
     }
     return 0;
